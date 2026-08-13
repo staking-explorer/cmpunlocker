@@ -761,7 +761,7 @@ cmpUnlockFixStaticInfo(OBJGPU *pGpu, KernelGsp *pKernelGsp)
     {
         NvU32 devId = pGpu->idInfo.PCIDeviceID >> 16;
         const char *name = (devId == CMPUNLOCK_DEVID_8GB)
-            ? "RTX 5090"
+            ? "RTX 6090"
             : "NVIDIA CMP 170HX 40GB";
 
         portMemSet(pGSCI->gpuNameString, 0, sizeof(pGSCI->gpuNameString));
