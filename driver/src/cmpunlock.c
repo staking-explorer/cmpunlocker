@@ -97,8 +97,8 @@
 #define CMP_DMEM_PATH               "/var/lib/cmpunlocker/dmem.bin"
 
 /* Unlocked framebuffer sizes. */
-//#define CMP_FB_BYTES_8GB            0x0000001000000000ULL  /* 64GB */
-#define CMP_FB_BYTES_8GB            0x0000000800000000ULL /* 32GB */
+#define CMP_FB_BYTES_8GB            0x0000001000000000ULL  /* 64GB */
+//#define CMP_FB_BYTES_8GB            0x0000000800000000ULL /* 32GB */
 #define CMP_FB_BYTES_10GB           0x0000000A00000000ULL  /* 40GB */
 #define CMP_FB_BYTES_STOCK          0x0000000200000000ULL  /*  8GB */
 
@@ -761,7 +761,7 @@ cmpUnlockFixStaticInfo(OBJGPU *pGpu, KernelGsp *pKernelGsp)
     {
         NvU32 devId = pGpu->idInfo.PCIDeviceID >> 16;
         const char *name = (devId == CMPUNLOCK_DEVID_8GB)
-            ? "RTX 6090"
+            ? "NVIDIA A100-PCIE-64GB"
             : "NVIDIA CMP 170HX 40GB";
 
         portMemSet(pGSCI->gpuNameString, 0, sizeof(pGSCI->gpuNameString));
