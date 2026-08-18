@@ -761,7 +761,7 @@ cmpUnlockFixStaticInfo(OBJGPU *pGpu, KernelGsp *pKernelGsp)
     {
         NvU32 devId = pGpu->idInfo.PCIDeviceID >> 16;
         const char *name = (devId == CMPUNLOCK_DEVID_8GB)
-            ? "NVIDIA A100-PCIE-64GB"
+            ? "NVIDIA A100 64GB PCIe"
             : "NVIDIA CMP 170HX 40GB";
 
         portMemSet(pGSCI->gpuNameString, 0, sizeof(pGSCI->gpuNameString));
